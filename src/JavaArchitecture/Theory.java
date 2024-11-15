@@ -52,5 +52,43 @@ public class Theory {
         1.class loader loads all classes needed to execute the program
         2.JVM sends code to byte code verifier to check the format of code
          */
+        //compile time
+        /*
+        .java file ->.class file
+         */
+        //runtime
+        /*
+        class loader->byte code verifier->interpreter->runtime->hardware
+         */
+        //(how JVM works) Class Loader
+        /*
+        -Loading:
+            -read .class file nd generate binary data
+            -an object of this class is created in heap
+        -Linking:
+            -JVM verifies the .class file
+            -allocates memory for class variables and default references
+            -replace symbolic references from the type with direct references
+        -Initialization
+            -all the static variables are assigned with their values defined in the code and static block
+
+        JVM contains the stack and heap memory allocations.
+
+         */
+        //JVM Execution
+        /*
+        interpreter
+        -line by line execution
+        -when one method is called many times,it will interpret again and again
+         */
+        //JIT(just in time compiler)
+        /*
+        -those methods that are repeated JIT provides direct machine code so re-interpretation is not required.
+        -makes execution faster
+         */
+        //Workflow
+        /*
+        java source code ->JDK -> Bytecode ->JVM ->JRE
+         */
     }
 }
