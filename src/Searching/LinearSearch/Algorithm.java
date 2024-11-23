@@ -2,7 +2,7 @@ package Searching.LinearSearch;
 
 import java.util.Scanner;
 import arrays.Input.InputAnIntArray;
-public class Alogorithm {
+public class Algorithm {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         int[] arr=InputAnIntArray.ArrayInput();
