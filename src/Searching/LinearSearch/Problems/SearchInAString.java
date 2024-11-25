@@ -1,6 +1,5 @@
-package Searching.Problems;
+package Searching.LinearSearch.Problems;
 
-import java.util.Scanner;
 public class SearchInAString {
     public static void main(String[] args) {
         System.out.println(SearchChar("janu",'u'));

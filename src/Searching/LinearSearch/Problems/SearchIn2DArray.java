@@ -1,4 +1,4 @@
-package Searching.Problems;
+package Searching.LinearSearch.Problems;
 import arrays.Input.InputAnIntArray;
 
 import java.util.Arrays;
