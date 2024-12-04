@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class In2DArray {
     public static void main(String[] args) {
     int[][] matrix=InputAnIntArray.ArrayInput2D();
-        System.out.println(Arrays.toString(search(matrix,10)));
+        System.out.println(Arrays.toString(search1(matrix,4)));
     }
     static int[] search(int[][] matrix,int target){
         int r=0;
@@ -65,9 +65,11 @@ public class In2DArray {
         }
         //search in 4th half
         if(target<=matrix[rs+1][cm+1]){
-
+            return bSearch(matrix,rs+1,cm+1,cols-1,target);
         }
+        return new int[]{-1,-1};
     }
+
     static int[] bSearch(int[][] matrix,int r,int cs,int ce,int target){
         while(cs<=ce){
             int mid=cs+(ce-cs)/2;
