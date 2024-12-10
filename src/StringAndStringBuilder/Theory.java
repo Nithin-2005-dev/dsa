@@ -1,5 +1,7 @@
 package StringAndStringBuilder;
 
+import java.util.ArrayList;
+
 public class Theory {
     public static void main(String[] args) {
         String name="nithin";
