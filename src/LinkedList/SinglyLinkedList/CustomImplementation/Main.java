@@ -12,7 +12,8 @@ public class Main {
         System.out.println(list.deleteLast());
         System.out.println(list.delete(1));
         list.insert(1,100);
-        list.insert(1,10);
+        list.insertRec(1,1);
+        list.insertRec(10,2);
         list.display();
         System.out.println(list.find(500));
     }

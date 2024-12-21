@@ -48,6 +48,20 @@ public class LinkedList {
             temp=temp.next;
         }
     }
+    //insert using recursion
+    public void insertRec(int val,int index){
+        insertRec(val,index,head);
+    }
+    private Node insertRec(int val,int index,Node node){
+        if(index==0){
+            Node temp=new Node(val);
+            temp.next=node;
+            size++;
+            return temp;
+        }
+        node.next=insertRec(val,index-1,node.next);
+        return node;
+    }
     public void insert(int p,int val){
         if(p==0){
             this.insertFirst(val);
