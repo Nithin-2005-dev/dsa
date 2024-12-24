@@ -1,4 +1,4 @@
-package StringAndStringBuilder.PatternProblems;
+package Strings.PatternProblems;
 
 public class Pattern3 {
     public static void main(String[] args) {

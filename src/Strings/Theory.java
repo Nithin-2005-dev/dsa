@@ -1,6 +1,4 @@
-package StringAndStringBuilder;
-
-import java.util.ArrayList;
+package Strings;
 
 public class Theory {
     public static void main(String[] args) {

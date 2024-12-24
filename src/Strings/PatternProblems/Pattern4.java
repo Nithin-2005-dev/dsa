@@ -1,4 +1,4 @@
-package StringAndStringBuilder.PatternProblems;
+package Strings.PatternProblems;
 
 import java.util.Scanner;
 
