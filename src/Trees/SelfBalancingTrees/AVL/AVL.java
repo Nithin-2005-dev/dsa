@@ -2,12 +2,12 @@ package Trees.SelfBalancingTrees.AVL;
 
 import Trees.BinarySearchTree.BST;
 
-class AVL {
+public class AVL {
 
     public class Node {
-        private int value;
-        private Node left;
-        private Node right;
+        public int value;
+        public Node left;
+        public Node right;
         private int height;
 
         public Node(int value) {
@@ -19,7 +19,7 @@ class AVL {
         }
     }
 
-    private Node root;
+    public Node root;
 
     public AVL() {
 
