@@ -3,7 +3,7 @@ import Trees.SelfBalancingTrees.AVL.*;
 
 import java.util.*;
 
-public class BfsAndDfs {
+public class BFS {
     /*
     BFS:
     ->breadth first search
