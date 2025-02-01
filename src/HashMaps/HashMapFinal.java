@@ -1,6 +1,5 @@
 package HashMaps;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -8,8 +7,8 @@ public class HashMapFinal<K,V> {
     ArrayList<LinkedList<Entity>> list;
     private int size=0;
     private float lf=0.5f;
-    public HashMapFinal(){
-        list=new ArrayList<>();
+
+    public HashMapFinal() {
         for (int i = 0; i < 10; i++) {
             list.add(new LinkedList<>());
         }
@@ -17,38 +16,37 @@ public class HashMapFinal<K,V> {
     public void put(K key,V value){
         int hash=Math.abs(key.hashCode()%list.size());
         LinkedList<Entity> entities=list.get(hash);
-        for (Entity entity:entities) {
-            if(entity.key.equals(key)){
-                entity.value=value;
+        for (int i = 0; i < entities.size(); i++) {
+            if(entities.get(i).key.equals(key)){
+                entities.get(i).value=value;
                 return;
             }
         }
-        if((float) size /list.size()>lf){
+        if((float)(size)/list.size()>lf){
             reHash();
         }
-        entities.add(new Entity(key,value));
+        entities.add(new Entity(key, value));
         size++;
     }
-    private void reHash(){
-        System.out.println("we are now rehashing...");
+    private  void reHash(){
         ArrayList<LinkedList<Entity>> old=list;
         list=new ArrayList<>();
         size=0;
         for (int i = 0; i < old.size()*2; i++) {
             list.add(new LinkedList<>());
         }
-        for (LinkedList<Entity> entries:old) {
+        for(LinkedList<Entity> entries:old){
             for (Entity entry:entries){
-                put(entry.key,entry.value);
+                put(entry.key, entry.value);
             }
         }
     }
     public V get(K key){
         int hash=Math.abs(key.hashCode()%list.size());
         LinkedList<Entity> entities=list.get(hash);
-        for (Entity entity:entities){
-            if (entity.key.equals(key)){
-                return entity.value;
+        for (Entity entry:entities){
+            if(entry.key.equals(key)){
+                return entry.value;
             }
         }
         return null;
@@ -57,9 +55,9 @@ public class HashMapFinal<K,V> {
         int hash=Math.abs(key.hashCode()%list.size());
         LinkedList<Entity> entities=list.get(hash);
         Entity target=null;
-        for (Entity entity:entities){
-            if (entity.key.equals(key)){
-                target=entity;
+        for (Entity entry:entities){
+            if(entry.key.equals(key)){
+                target=entry;
                 break;
             }
         }
@@ -69,9 +67,10 @@ public class HashMapFinal<K,V> {
     private class Entity{
         K key;
         V value;
-        public Entity(K key,V value){
-            this.key=key;
-            this.value=value;
+
+        public Entity(K key, V value) {
+            this.key = key;
+            this.value = value;
         }
     }
 }
