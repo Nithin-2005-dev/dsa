@@ -12,7 +12,7 @@ public class Theory {
     ->heap is represented as a complete binary tree.
     ->every node value>=all of its children.
 
-    if roo=>i=1
+    if root=>i=1
     parent(i)=i/2;
     left(i)=2*i;
     right(i)=2*i+1;
