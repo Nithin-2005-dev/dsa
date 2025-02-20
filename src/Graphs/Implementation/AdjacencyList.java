@@ -16,7 +16,7 @@ cons:
 ->less intuitive for dense graphs
  */
 public class AdjacencyList {
-    private HashMap<Integer, List<Integer>> adjacencyList;
+    public HashMap<Integer, List<Integer>> adjacencyList;
     public AdjacencyList(){
         this.adjacencyList=new HashMap<>();
     }
