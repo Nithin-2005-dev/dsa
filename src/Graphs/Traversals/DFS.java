@@ -38,7 +38,8 @@ public class DFS {
         graph.addEdge(50,20);
         graph.addEdge(50,40);
         stack.add(10);
-        dfs(set,stack,graph.adjacencyList);
+//        dfs(set,stack,graph.adjacencyList);
+        dfsRec(set,10,graph.adjacencyList);
 //        System.out.println(set);
     }
     public static void dfs(HashSet<Integer> set, Stack<Integer> stack, HashMap<Integer, List<Integer>> map){
@@ -52,6 +53,15 @@ public class DFS {
                         stack.push(map.get(vertex).get(i));
                     }
                 }
+            }
+        }
+    }
+    public static void dfsRec(HashSet<Integer> set,int vertex,HashMap<Integer, List<Integer>> map){
+            set.add(vertex);
+        System.out.print(vertex+" ");
+        for (int i = 0; i < map.get(vertex).size(); i++) {
+            if(!set.contains(map.get(vertex).get(i))){
+                dfsRec(set,map.get(vertex).get(i),map);
             }
         }
     }
