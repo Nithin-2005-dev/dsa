@@ -7,6 +7,5 @@ public class Main {
         heap.insert(300);
         heap.insert(1054);
         heap.insert(1033);
-        System.out.println(heap.heapSort());
     }
 }

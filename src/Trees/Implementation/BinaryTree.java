@@ -3,11 +3,11 @@ package Trees.Implementation;
 import java.util.Scanner;
 
 public class BinaryTree {
-    protected Node root;
-    private class Node{
-        int value;
-        Node left;
-        Node right;
+    public Node root;
+    public class Node{
+        public int value;
+        public Node left;
+        public Node right;
 
         public Node(int value) {
             this.value = value;
