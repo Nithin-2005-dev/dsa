@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdjacencyListWithWeights {
-    public class GraphEdge{
+    public static class GraphEdge{
         private final int source;
         private final int destination;
         private final int weight;
