@@ -1,12 +1,7 @@
 package Trees.Implementation;
 
 public class BinarySearchTree {
-    public static void main(String[] args) {
-        BinarySearchTree tree=new BinarySearchTree();
-        tree.populate(new int[]{3,2,4,5,7,6});
-        tree.display();
-    }
-    private class Node {
+    static class Node {
         int value;
         int height;
         Node right;
