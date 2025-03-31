@@ -8,7 +8,6 @@ public class AdjacencyListWithWeights {
         private final int source;
         private final int destination;
         private final int weight;
-
         public GraphEdge(int source, int destination, int weight) {
             this.source = source;
             this.destination = destination;
