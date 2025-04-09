@@ -3,7 +3,7 @@ package Trees.Implementation;
 public class AVL {
     public static void main(String[] args) {
         AVL tree=new AVL();
-        tree.populate(new int[]{1,2,3,4,5,6});
+        tree.populate(new int[]{79,31,67,97,41,73,53,89,43,59,71,37,66});
         tree.display();
     }
     private static class Node {
